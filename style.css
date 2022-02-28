@@ -1,0 +1,13 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #03203C;
+}
+ 
+/* gally image style  */
+img{
+    transition: all 500ms;
+}
+img:hover{
+    
+    transform: scale(0.9);
+}
