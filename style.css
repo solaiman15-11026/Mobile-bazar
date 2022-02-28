@@ -4,10 +4,10 @@ body{
 }
  
 /* gally image style  */
-img{
+.image-design{
     transition: all 500ms;
 }
-img:hover{
+.image-design:hover{
     
     transform: scale(0.9);
 }
