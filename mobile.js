@@ -13,20 +13,21 @@ const seachButton = () => {
         .then(response => response.json())
         .then(data => searchResult(data.data))
 }
-const searchResult = data => {
-    console.log(data)
+const searchResult = phones => {
+    //console.log(data)
     const createDiv = document.getElementById('result-show')
-    for (let phone of data) {
+    createDiv.textContent = '';
+    phones.forEach(phone => {
         const div = document.createElement('div')
         div.innerHTML = `
         <div class="col">
-                <div class="card h-100">
-                    <img height-50% src="${phone.image}" class="card-img-top" alt="...">
+                <div class="card ">
+                    <img src="${phone.image}" class="w-50 card-img-top mx-auto" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">${phone.phone_name}</h5>
-                        <h6 class="card-title">${phone.brand}</h6>
+                        <h5 class="card-title"><b>Model:</b> ${phone.phone_name}</h5>
+                        <h6 class="card-title"><b>Brand:</b> ${phone.brand}</h6>
                     </div>
-                </div> `
-        createDiv.appendChild(div)
-    }
+                </div> `;
+        createDiv.appendChild(div);
+    })
 }
