@@ -3,11 +3,22 @@ body{
     background-color: #03203C;
 }
  
-/* gally image style  */
+/*--------------------- gally image style --------------------- */
 .image-design{
     transition: all 500ms;
 }
 .image-design:hover{
     
     transform: scale(0.9);
+}
+
+/*------------------- details div design here  ----------*/
+.degine{
+    color:rgba(59, 46, 46, 0.918);
+}
+.size{
+    font-size: 14px;
+}
+.Fdesign{
+  border-bottom: 2px solid rgba(106, 106, 109, 0.966);
 }
