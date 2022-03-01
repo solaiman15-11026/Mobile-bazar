@@ -12,6 +12,7 @@ const seachButton = () => {
     } else {
         document.getElementById('hide').style.display = 'none'
         searchInput.value = '';
+
         const url = `https://openapi.programming-hero.com/api/phones?search=${search}`
         fetch(url)
             .then(response => response.json())
@@ -23,6 +24,7 @@ const searchResult = phones => {
     const clearDetails = document.getElementById('details-show')
     clearDetails.textContent = '';
     const createDiv = document.getElementById('result-show')
+    createDiv.textContent = ''
     if (!phones[0]) {
         document.getElementById('hide2').style.display = 'block'
     } else {
