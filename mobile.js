@@ -62,11 +62,11 @@ const detailsResult = mobile => {
                 <h6 class="card-text mb-1 size"><b>Chipset:</b> ${mobile.mainFeatures.chipSet}</h6>
                 <h6 class="card-text mb-3 size"><b>Sensor:</b> ${mobile.mainFeatures.sensors}</h6>
                 <h5 class="card-title mb-2 Fdesign"><b>Others:</b></h5>
-                <h6 class="card-text mb-1 size"><b>WLAN:</b> ${mobile.others.WLAN}</h6>
-                <h6 class="card-text mb-1 size"><b>Bluetooth:</b> ${mobile.others.Bluetooth}</h6>
-                <h6 class="card-text mb-1 size"><b>GPS:</b> ${mobile.others.GPS}</h6>
-                <h6 class="card-text mb-1 size"><b>Radio:</b> ${mobile.others.Radio}</h6>
-                <h6 class="card-text size"><b>USB:</b> ${mobile.others.USB}</h6>
+                <h6 class="card-text mb-1 size"><b>WLAN:</b> ${mobile.others ? mobile.others.WLAN : 'not found'}</h6>
+                <h6 class="card-text mb-1 size"><b>Bluetooth:</b> ${mobile.others ? mobile.others.Bluetooth : 'not found'}</h6>
+                <h6 class="card-text mb-1 size"><b>GPS:</b> ${mobile.others ? mobile.others.GPS : 'not found'}</h6>
+                <h6 class="card-text mb-1 size"><b>Radio:</b> ${mobile.others ? mobile.others.Radio : 'not found'}</h6>
+                <h6 class="card-text size"><b>USB:</b> ${mobile.others ? mobile.others.USB : 'not found'}</h6>
               
             </div>
         </div>
