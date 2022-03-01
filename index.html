@@ -15,6 +15,8 @@
         href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Dosis:wght@300&family=Lobster+Two&family=Merriweather:ital,wght@1,300&family=Montserrat:wght@500&family=Moon+Dance&family=Oswald:wght@400;500&family=Poppins:wght@300;400;700&family=Rubik+Beastly&family=Saira+Condensed:wght@300&display=swap"
         rel="stylesheet">
 
+    <!------ animation link add----------------------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
     <!------------- boot link here---------------------------->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -44,9 +46,8 @@
 
     <!------------------------------------Section-01 search anything ------------------->
     <section class="container mb-5">
-        <h2 style="color: rgb(248, 240, 240); text-align: center; margin-bottom: 18px;">Welcome to mobile bazar</h2>
-
-        <div class="input-group mb-4">
+        <h2 class="animate__animated animate__fadeInLeft heading">Welcome to mobile bazar</h2>
+        <div class="input-group mb-3">
 
             <input id="search-phone" type="text" class="form-control" placeholder="search your phone..."
                 aria-label="search your phone....." aria-describedby="button-addon2">
@@ -56,13 +57,17 @@
 
         </div>
 
-        <!-- diploy  Details result here -->
+        <!-- error result handile  -->
+        <h6 id="hide" class="hide-me animate__animated animate__shakeX"> * Search anything! * </h6>
+        <h6 id="hide2" class="hide-me animate__animated animate__shakeX"> * No Result found! * </h6>
 
+
+        <!--- diploy  Details result here --->
         <div id="details-show" class="card mb-4 mx-auto" style="max-width: 580px; border: none;">
 
         </div>
 
-        <!-- diploy  search result here -->
+        <!--- diploy  search result here --->
         <div id="result-show" class="row row-cols-1 row-cols-md-3 g-4 ">
 
         </div>
@@ -73,8 +78,7 @@
 
     <!---------------------------------Section-02 mobile picture|(extra)|--------------------------->
     <section class="container">
-        <h3 style="color: rgb(248, 240, 240); text-align: center; margin-bottom: 18px;">
-            Our popular phones</h3>
+        <h3 class="animate__animated animate__fadeInRight heading2">Our popular phones</h3>
         <div class="row">
             <div class="col-6 col-md-4 col-lg-4 mb-5">
                 <img class="img-fluid rounded-3 h-100 mb-1 image-design" src="./image/iphone.jpg" alt="" srcset="">

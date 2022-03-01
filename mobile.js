@@ -7,19 +7,28 @@ const buyAlret = () => {
 const seachButton = () => {
     const searchInput = document.getElementById('search-phone')
     const search = searchInput.value;
-    searchInput.value = '';
-    const url = `https://openapi.programming-hero.com/api/phones?search=${search}`
-    fetch(url)
-        .then(response => response.json())
-        .then(data => searchResult(data.data))
+    if (search == '') {
+        document.getElementById('hide').style.display = 'block'
+    } else {
+        document.getElementById('hide').style.display = 'none'
+        searchInput.value = '';
+        const url = `https://openapi.programming-hero.com/api/phones?search=${search}`
+        fetch(url)
+            .then(response => response.json())
+            .then(data => searchResult(data.data))
+    }
 }
 const searchResult = phones => {
     //console.log(phones)
     const createDiv = document.getElementById('result-show')
-    createDiv.textContent = '';
-    phones.forEach(phone => {
-        const div = document.createElement('div')
-        div.innerHTML = `
+    if (!phones[0]) {
+        document.getElementById('hide2').style.display = 'block'
+    } else {
+        document.getElementById('hide2').style.display = 'none'
+        createDiv.textContent = '';
+        phones.forEach(phone => {
+            const div = document.createElement('div')
+            div.innerHTML = `
         <div class="col">
                 <div class="card ">
                     <img src="${phone.image}" class="w-50 card-img-top mx-auto" alt="...">
@@ -29,8 +38,9 @@ const searchResult = phones => {
                         <button onclick="detailsButton('${phone.slug}')" type="button" class="btn btn-primary p-1">Details</button>
                     </div>
                 </div> `;
-        createDiv.appendChild(div);
-    })
+            createDiv.appendChild(div);
+        })
+    }
 }
 
 //------------------------- phone details work here-----------------------------
