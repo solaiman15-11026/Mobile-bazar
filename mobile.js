@@ -20,6 +20,8 @@ const seachButton = () => {
 }
 const searchResult = phones => {
     //console.log(phones)
+    const clearDetails = document.getElementById('details-show')
+    clearDetails.textContent = '';
     const createDiv = document.getElementById('result-show')
     if (!phones[0]) {
         document.getElementById('hide2').style.display = 'block'
