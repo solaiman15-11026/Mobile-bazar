@@ -26,7 +26,7 @@ const searchResult = phones => {
     } else {
         document.getElementById('hide2').style.display = 'none'
         createDiv.textContent = '';
-        phones.forEach(phone => {
+        phones.slice(0, 20).forEach(phone => {
             const div = document.createElement('div')
             div.innerHTML = `
         <div class="col">
